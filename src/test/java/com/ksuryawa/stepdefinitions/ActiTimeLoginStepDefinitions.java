@@ -25,6 +25,7 @@ public class ActiTimeLoginStepDefinitions {
 	}
 	@When("I enter {string} into the username field")
 	public void i_enter_into_the_username_field(String userName) {
+
 		loginPage.enterUserName(userName);
 	}
 	@When("I enter {string} into the password field")
@@ -41,4 +42,9 @@ public class ActiTimeLoginStepDefinitions {
 	}
 
 
+	@When("I login as a {string}")
+	public void iLoginAsA(String role) {
+	loginPage.loginToApplication(role);
+
+	}
 }

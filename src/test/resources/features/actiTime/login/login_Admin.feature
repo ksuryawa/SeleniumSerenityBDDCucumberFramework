@@ -5,9 +5,14 @@ Feature: ActiTime Login feature
   I want to login to ActiTime application
   So that I can use it
 
-  Scenario: Login and Logout to ActiTime application as a manager
+  Scenario: Login and Logout to actiTime application as a manager
     Given I am on the ActiTime login page
     When I enter "admin" into the username field
     And I enter "manager" into the password field
     And I click on the login button
+    Then I should be logged in to ActiTime application
+
+  Scenario: Login and Logout to ActiTime application as a manager using json
+    Given I am on the ActiTime login page
+    When I login as a "admin"
     Then I should be logged in to ActiTime application
